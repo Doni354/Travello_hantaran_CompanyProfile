@@ -33,38 +33,43 @@
         <?php foreach ($profil as $descper) : ?>
             <div class="row align-items-center">
                 <div class="col-lg">
-                    <div class="about-img">
                         <div class="embed-responsive embed-responsive-16by9" style="width: 100%;">
                             <?php foreach ($profil as $maps) :  ?>
                                 <?= $maps->link_maps ?>
                             <?php endforeach;  ?>
                         </div>
-                    </div>
-
                 </div>
                 <div class="col-lg">
-                    <div class="about-content">
-                        <?php foreach ($profil as $desc) : ?>
-                            <div class="testimonial">
-                                <blockquote>
-                                    <h3>
-                                        <?php if (lang('Blog.Languange') == 'en') {
-                                            echo $desc->deskripsi_kontak_en;
-                                        } ?>
-                                        <?php if (lang('Blog.Languange') == 'in') {
-                                            echo $desc->deskripsi_kontak_in;
-                                        } ?>
-                                    </h3>
-                                </blockquote>
-                                <!-- <img src="images/person_2.jpg" alt="">
-                                <p class="client-name">Ben Anderson</p> -->
-                            </div>
-                        <?php endforeach;  ?>
-                    </div>
+    <div class="card" style="
+        border-radius: 20px; 
+        background-color: rgba(255, 255, 255, 0.85); 
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    ">
+        <div class="about-content">
+            <?php foreach ($profil as $desc) : ?>
+                <div class="testimonial">
+                    <blockquote>
+                        <h3>
+                            <?php if (lang('Blog.Languange') == 'en') {
+                                echo $desc->deskripsi_kontak_en;
+                            } ?>
+                            <?php if (lang('Blog.Languange') == 'in') {
+                                echo $desc->deskripsi_kontak_in;
+                            } ?>
+                        </h3>
+                    </blockquote>
                 </div>
+            <?php endforeach;  ?>
+        </div>
+    </div>
+</div>
+
             </div>
         <?php endforeach ?>
     </div>
 </div>
+
 
 <?= $this->endSection('content'); ?>

@@ -34,21 +34,21 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="section-header text-left">
-                        <p><?php echo lang('Blog.titleAboutUs')  ?></p>
-                        <h2><?= $descper->nama_perusahaan; ?></h2>
-                    </div>
-                    <div class="about-content">
-                        <p>
-                            <?php if (lang('Blog.Languange') == 'en') {
-                                echo character_limiter($descper->deskripsi_perusahaan_en, 700);
-                            } ?>
-                            <?php if (lang('Blog.Languange') == 'in') {
-                                echo character_limiter($descper->deskripsi_perusahaan_in, 700);
-                            } ?>
-                        </p>
-                    </div>
-                </div>
+    <div class="section-header text-left mb-1">
+        <h2><?= $descper->nama_perusahaan; ?></h2>
+    </div>
+    <div class="about-content">
+        <p>
+            <?php if (lang('Blog.Languange') == 'en') {
+                echo $descper->deskripsi_perusahaan_en;
+            } ?>
+            <?php if (lang('Blog.Languange') == 'in') {
+                echo $descper->deskripsi_perusahaan_in;
+            } ?>
+        </p>
+    </div>
+</div>
+
             </div>
         <?php endforeach ?>
     </div>

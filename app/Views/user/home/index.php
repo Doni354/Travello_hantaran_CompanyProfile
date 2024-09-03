@@ -97,7 +97,7 @@ $latestProducts = array_slice($tbproduk, 0, 2);
                                             </p>
                                         </div>
                                         <div class="button-group">
-                                            <a href="<?= base_url('product/detail/' . $product->id_produk . '/' . url_title($product->nama_produk_en) . '_' . url_title($product->nama_produk_in)) ?>" class="btn btn-custom">View Product</a>
+                                            <a href="<?= base_url('product/detail/' . $product->id_produk . '/' . url_title($product->nama_produk_en) . '_' . url_title($product->nama_produk_in)) ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmore'); ?></a>
                                         </div>
                                     </div>
                                 </div>
@@ -132,7 +132,7 @@ $latestProducts = array_slice($tbproduk, 0, 2);
                                             </p>
                                         </div>
                                         <div class="button-group">
-                                            <a href="<?= base_url('product/detail/' . $product->id_produk . '/' . url_title($product->nama_produk_en) . '_' . url_title($product->nama_produk_in)) ?>" class="btn btn-custom">View Product</a>
+                                            <a href="<?= base_url('product/detail/' . $product->id_produk . '/' . url_title($product->nama_produk_en) . '_' . url_title($product->nama_produk_in)) ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmore'); ?></a>
                                         </div>
                                     </div>
                                 </div>
@@ -143,7 +143,7 @@ $latestProducts = array_slice($tbproduk, 0, 2);
             </div>
         <?php endforeach; ?>
         <div class="text-center mt-5 mb-5">
-            <a href="<?= base_url('product') ?>" class="btn btn-custom">View all Product</a>
+            <a href="<?= base_url('product') ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmoreProduct'); ?></a>
         </div>
     </div>
 </div>
@@ -225,7 +225,7 @@ $latestProducts = array_slice($tbproduk, 0, 2);
         border: none;
         cursor: pointer;
         display: inline-block;
-        margin-top: 25px;
+
         position: relative;
         z-index: 2;
     }
@@ -280,8 +280,11 @@ $latestProducts = array_slice($tbproduk, 0, 2);
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title text-center">
-                    <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary bg-light">Artikel Terbaru</h5>
+                    <h5 class="mb-2 px-3 py-1  rounded-pill d-inline-block border border-2" style="color: #E81C2E; border-color: #202C45; background-color: #F8F9FA;">
+                        <?php echo lang('Blog.newsArticles'); ?>
+                    </h5>
                 </div>
+
                 <br><br>
             </div>
         </div>
@@ -298,7 +301,8 @@ $latestProducts = array_slice($tbproduk, 0, 2);
                                 <div class="mb-2">
                                     <span class="text-uppercase text-primary font-weight-bold"><?= date('d F Y', strtotime($row->created_at)); ?></span>
                                 </div>
-                                <h4 class="display-5  article-title"><?= substr(strip_tags($row->judul_artikel), 0, 10) ?>...</h4>
+                                <h4 class="display-5 article-title"><?= strip_tags($row->judul_artikel) ?></h4>
+
                                 <p class="text-muted"><?= substr(strip_tags($row->deskripsi_artikel), 0, 30) ?>...</p>
                             </div>
                         </a>
@@ -319,7 +323,8 @@ $latestProducts = array_slice($tbproduk, 0, 2);
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         border-radius: 20px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        overflow: hidden; /* Ensure content fits within the border-radius */
+        overflow: hidden;
+        /* Ensure content fits within the border-radius */
     }
 
     .article-card:hover {
@@ -337,12 +342,15 @@ $latestProducts = array_slice($tbproduk, 0, 2);
 
     .article-title {
         transition: color 0.3s ease-in-out;
-        cursor: pointer; /* Add pointer cursor to indicate interactivity */
+        cursor: pointer;
+        /* Add pointer cursor to indicate interactivity */
     }
 
     .article-card:hover .article-title {
-        color: #202C45; /* Change color on hover */
-        text-decoration: underline; /* Optional: add underline on hover */
+        color: #202C45;
+        /* Change color on hover */
+        text-decoration: underline;
+        /* Optional: add underline on hover */
     }
 
     .text-primary {
@@ -355,7 +363,8 @@ $latestProducts = array_slice($tbproduk, 0, 2);
 
     .article-link {
         text-decoration: none;
-        color: inherit; /* Maintain original text color */
+        color: inherit;
+        /* Maintain original text color */
     }
 </style>
 

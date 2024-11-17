@@ -24,8 +24,10 @@
                             <table class="table app-table-hover mb-0 text-left">
                                 <thead>
                                     <tr>
-                                        <th class="text-center" valign="middle">Judul Artikel</th>
-                                        <th class="text-center" valign="middle">Deskripsi Artikel</th>
+                                        <th class="text-center" valign="middle">Judul Artikel (ID)</th>
+                                        <th class="text-center" valign="middle">Judul Artikel (EN)</th>
+                                        <th class="text-center" valign="middle">Deskripsi Artikel (ID)</th>
+                                        <th class="text-center" valign="middle">Deskripsi Artikel (EN)</th>
                                         <th class="text-center" valign="middle">Foto Artikel</th>
                                         <th class="text-center" valign="middle">Aksi</th>
                                     </tr>
@@ -35,7 +37,9 @@
                                     <?php foreach ($artikels as $artikel) : ?>
                                         <tr>
                                             <td><?= $artikel->judul_artikel ?></td>
+                                            <td><?= $artikel->judul_artikel_en ?></td>
                                             <td><?= $artikel->deskripsi_artikel ?></td>
+                                            <td><?= $artikel->deskripsi_artikel_en ?></td>
                                             <td><img src="<?= base_url() . 'asset-user/images/' . $artikel->foto_artikel ?>" class="img-fluid" alt="Foto artikel"></td>
                                             <td valign="middle">
                                                 <div class="d-grid gap-2">

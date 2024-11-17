@@ -57,7 +57,7 @@ a:focus {
 }
 
 .container-fluid {
-    max-width: 1366px;
+    max-width: auto;
 }
 
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,

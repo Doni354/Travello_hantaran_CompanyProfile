@@ -138,7 +138,7 @@
                                     <div class="mb-2">
                                         <a class="text-body" href="<?= base_url($locale . '/' . ($locale === 'en' ? 'articles' : 'artikel') . '/' . ($locale === 'id' ? $artikel_item->slug_in : $artikel_item->slug_en)) ?>"><small><?= date('d F Y', strtotime($artikel_item->created_at)); ?></small></a>
                                     </div>
-                                    <a class="h6 m-0 display-7" href="<?= base_url('/artikel/detail/' . $artikel_item->id_artikel) ?>"><?= htmlspecialchars(substr($artikel_item->judul_artikel, 0, 2000)); ?></a>
+                                    <a class="h6 m-0 display-7" href="<?= base_url($locale . '/' . ($locale === 'en' ? 'articles' : 'artikel') . '/' . ($locale === 'id' ? $artikel_item->slug_in : $artikel_item->slug_en)) ?>"><?= htmlspecialchars(substr($artikel_item->judul_artikel, 0, 2000)); ?></a>
                                 </div>
                             </div>
                         <?php endforeach; ?>

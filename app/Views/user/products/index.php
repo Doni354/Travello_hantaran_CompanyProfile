@@ -46,7 +46,7 @@
                                 <!-- Image on the left side -->
                                 <div class="col-lg-6 text-center">
                                     <div class="card-img">
-                                        <img src="asset-user/images/<?= $produk->foto_produk; ?>" class="card-img-top" alt="<?php if (lang('Blog.Languange') == 'en') {
+                                        <img src="/asset-user/images/<?= $produk->foto_produk; ?>" class="card-img-top" alt="<?php if (lang('Blog.Languange') == 'en') {
                                                                                                                                     echo $produk->nama_produk_en;
                                                                                                                                 } else {
                                                                                                                                     echo $produk->nama_produk_in;
@@ -73,7 +73,7 @@
                                             </p>
                                         </div>
                                         <div class="button-group">
-                                            <a href="<?= base_url('product/detail/' . $produk->id_produk . '/' . url_title($produk->nama_produk_en) . '_' . url_title($produk->nama_produk_in)) ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmore'); ?></a>
+                                            <a href="<?= base_url($locale . '/' . ($locale === 'en' ? 'product' : 'produk') . '/' . (($locale === 'en') ? $produk->slug_en : $produk->slug_in)) ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmore'); ?></a>
                                         </div>
                                     </div>
                                 </div>
@@ -81,7 +81,7 @@
                                 <!-- Image on the right side -->
                                 <div class="col-lg-6 order-lg-2 text-center">
                                     <div class="card-img">
-                                        <img src="asset-user/images/<?= $produk->foto_produk; ?>" class="card-img-top" alt="<?php if (lang('Blog.Languange') == 'en') {
+                                        <img src="/asset-user/images/<?= $produk->foto_produk; ?>" class="card-img-top" alt="<?php if (lang('Blog.Languange') == 'en') {
                                                                                                                                     echo $produk->nama_produk_en;
                                                                                                                                 } else {
                                                                                                                                     echo $produk->nama_produk_in;
@@ -108,7 +108,7 @@
                                             </p>
                                         </div>
                                         <div class="button-group">
-                                            <a href="<?= base_url('product/detail/' . $produk->id_produk . '/' . url_title($produk->nama_produk_en) . '_' . url_title($produk->nama_produk_in)) ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmore'); ?></a>
+                                            <a href="<?= base_url($locale . '/' . ($locale === 'en' ? 'product' : 'produk') . '/' . (($locale === 'en') ? $produk->slug_en : $produk->slug_in)) ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmore'); ?></a>
                                         </div>
                                     </div>
                                 </div>

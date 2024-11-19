@@ -2,7 +2,7 @@
 <?= $this->Section('content'); ?>
 
 <!-- Page Header Start -->
-<div class="page-header" style="background-image: url('asset-user/images/hero_1.jpg');">
+<div class="page-header" style="background-image: url('/asset-user/images/hero_1.jpg');">
     <div class="container-center">
         <div class="container">
             <div class="row">

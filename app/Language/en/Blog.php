@@ -23,4 +23,6 @@ return [
     'Languange' => 'en',
     'newsActivities' => 'our activities',
     'btnReadmoreProduct' => 'see all products',
+    'newsArticles' => 'Latest News',
+    
 ];

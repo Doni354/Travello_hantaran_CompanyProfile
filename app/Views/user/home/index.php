@@ -154,7 +154,7 @@ $latestProducts = array_slice($tbproduk, 0, 2);
                                             </p>
                                         </div>
                                         <div class="button-group">
-                                            <a href="<?= base_url($locale . '/' . ($locale === 'en' ? 'product' : 'produk') . '/' . (($locale === 'en') ? $produk->slug_en : $produk->slug_in)) ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmore'); ?></a>
+                                            <a href="<?= base_url('product/detail/' . $product->id_produk . '/' . url_title($product->nama_produk_en) . '_' . url_title($product->nama_produk_in)) ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmore'); ?></a>
                                         </div>
                                     </div>
                                 </div>
@@ -189,7 +189,7 @@ $latestProducts = array_slice($tbproduk, 0, 2);
                                             </p>
                                         </div>
                                         <div class="button-group">
-                                            <a href="<?= base_url($locale . '/' . ($locale === 'en' ? 'product' : 'produk') . '/' . (($locale === 'en') ? $produk->slug_en : $produk->slug_in)) ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmore'); ?></a>
+                                            <a href="<?= base_url('product/detail/' . $product->id_produk . '/' . url_title($product->nama_produk_en) . '_' . url_title($product->nama_produk_in)) ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmore'); ?></a>
                                         </div>
                                     </div>
                                 </div>

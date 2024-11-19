@@ -24,4 +24,5 @@ return [
     'newsArticles' => 'Artikel Terbaru',
     'newsActivities' => 'Aktivitas Kami',
     'btnReadmoreProduct' => 'Lihat semua Produk',
+    'newsArticles' => 'Berita Kami',
 ];

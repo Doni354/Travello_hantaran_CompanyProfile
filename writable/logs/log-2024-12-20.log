@@ -1,0 +1,98 @@
+CRITICAL - 2024-12-20 07:04:57 --> Undefined property: stdClass::$slug_in
+in APPPATH\Views\user\home\index.php on line 157.
+ 1 APPPATH\Views\user\home\index.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$slug_in', 'D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Views\\user\\home\\index.php', 157)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Views\\user\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('user/home/index', [], true)
+ 5 APPPATH\Controllers\user\Homectrl.php(62): view('user/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\public\\index.php')
+CRITICAL - 2024-12-20 07:04:59 --> Undefined property: stdClass::$slug_in
+in APPPATH\Views\user\home\index.php on line 157.
+ 1 APPPATH\Views\user\home\index.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$slug_in', 'D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Views\\user\\home\\index.php', 157)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Views\\user\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('user/home/index', [], true)
+ 5 APPPATH\Controllers\user\Homectrl.php(62): view('user/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\public\\index.php')
+CRITICAL - 2024-12-20 07:05:00 --> Undefined property: stdClass::$slug_in
+in APPPATH\Views\user\home\index.php on line 157.
+ 1 APPPATH\Views\user\home\index.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$slug_in', 'D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Views\\user\\home\\index.php', 157)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Views\\user\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('user/home/index', [], true)
+ 5 APPPATH\Controllers\user\Homectrl.php(62): view('user/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\public\\index.php')
+CRITICAL - 2024-12-20 07:06:26 --> Undefined property: stdClass::$slug_in
+in APPPATH\Views\user\home\index.php on line 157.
+ 1 APPPATH\Views\user\home\index.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$slug_in', 'D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Views\\user\\home\\index.php', 157)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Views\\user\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('user/home/index', [], true)
+ 5 APPPATH\Controllers\user\Homectrl.php(62): view('user/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\public\\index.php')
+CRITICAL - 2024-12-20 07:06:32 --> Undefined property: stdClass::$slug_in
+in APPPATH\Views\user\artikel\index.php on line 51.
+ 1 APPPATH\Views\user\artikel\index.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$slug_in', 'D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Views\\user\\artikel\\index.php', 51)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Views\\user\\artikel\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('user/artikel/index', [], true)
+ 5 APPPATH\Controllers\user\Artikelctrl.php(51): view('user/artikel/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Artikelctrl->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Artikelctrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\public\\index.php')
+CRITICAL - 2024-12-20 07:07:21 --> Undefined property: stdClass::$slug_in
+in APPPATH\Views\user\artikel\index.php on line 51.
+ 1 APPPATH\Views\user\artikel\index.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$slug_in', 'D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Views\\user\\artikel\\index.php', 51)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Views\\user\\artikel\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('user/artikel/index', [], true)
+ 5 APPPATH\Controllers\user\Artikelctrl.php(51): view('user/artikel/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Artikelctrl->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Artikelctrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\public\\index.php')
+CRITICAL - 2024-12-20 07:07:22 --> Undefined property: stdClass::$slug_in
+in APPPATH\Views\user\artikel\index.php on line 51.
+ 1 APPPATH\Views\user\artikel\index.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$slug_in', 'D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Views\\user\\artikel\\index.php', 51)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Views\\user\\artikel\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('user/artikel/index', [], true)
+ 5 APPPATH\Controllers\user\Artikelctrl.php(51): view('user/artikel/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Artikelctrl->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Artikelctrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\public\\index.php')
+INFO - 2024-12-20 07:08:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:08:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-20 07:08:30 --> Undefined property: stdClass::$slug_in
+in APPPATH\Views\user\home\index.php on line 157.
+ 1 APPPATH\Views\user\home\index.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$slug_in', 'D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Views\\user\\home\\index.php', 157)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Views\\user\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('user/home/index', [], true)
+ 5 APPPATH\Controllers\user\Homectrl.php(62): view('user/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\public\\index.php')

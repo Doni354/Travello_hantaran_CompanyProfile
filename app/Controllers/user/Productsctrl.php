@@ -82,7 +82,7 @@ class Productsctrl extends BaseController
     $slug_baru = ($locale === 'id') ? $slug_id : $slug_en;
 
     // Tentukan prefix URL berdasarkan bahasa
-    $prefix_url = ($locale === 'id') ? 'layanan' : 'service';
+    $prefix_url = ($locale === 'id') ? 'produk' : 'product';
 
     // Jika slug di URL tidak sesuai dengan bahasa yang dipilih, redirect ke slug yang benar
     if ($slug_produk !== $slug_baru) {

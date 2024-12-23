@@ -48,15 +48,15 @@
             <?php foreach ($artikelterbaru as $row) : ?>
                 <div class="col-lg-4 mb-4">
                     <div class="position-relative d-flex flex-column h-100 article-card">
-                        <a href="<?= base_url('/artikel/detail/' . $row->id_artikel) ?>" class="article-link">
-                            <img class="img-fluid w-100" style="object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;" src="<?= base_url('asset-user') ?>/images/<?= $row->foto_artikel; ?>" loading="lazy">
+                        <a href="<?= base_url(($locale !== '' ? $locale . '/' : '') . ($locale === 'en' ? 'articles' : 'artikel') . '/' . (($locale === 'en') ? $row->slug_en : $row->slug_in)) ?>" class="article-link">
+                            <img class="img-fluid w-100" style="object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;" src="<?= base_url('asset-user') ?>/images/<?= $row->foto_artikel; ?>" alt="<?= base_url('asset-user') ?>/images/<?= $row->foto_artikel; ?>" loading="lazy">
                             <div class="bg-white border border-top-0 p-4 flex-grow-1 article-content">
                                 <div class="mb-2">
                                     <span class="text-uppercase text-primary font-weight-bold"><?= date('d F Y', strtotime($row->created_at)); ?></span>
                                 </div>
-                                <h4 class="display-5 article-title"><?= strip_tags($row->judul_artikel) ?></h4>
+                                <h4 class="display-5 article-title"><?= session('lang') === 'id' ? strip_tags($row->judul_artikel) : strip_tags($row->judul_artikel_en); ?></h4>
 
-                                <p class="text-muted"><?= substr(strip_tags($row->deskripsi_artikel), 0, 30) ?>...</p>
+                                <p class="text-muted"><?= substr(strip_tags(session('lang') === 'id' ? $row->deskripsi_artikel : $row->deskripsi_artikel_en), 0, 30) ?>...</p>
                             </div>
                         </a>
                     </div>

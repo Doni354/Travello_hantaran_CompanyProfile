@@ -39,20 +39,20 @@
             <?php foreach ($tbaktivitas as $aktivitas) : ?>
                 <div class="col-lg-4 mb-4">
                     <div class="position-relative d-flex flex-column h-100 produk-card">
-                        <a href="<?= base_url('activities/detail/' . $aktivitas->id_aktivitas . '/' . url_title($aktivitas->nama_aktivitas_en) . '_' . url_title($aktivitas->nama_aktivitas_in)) ?>" class="produk-link">
-                            <img class="img-fluid w-100" style="object-fit: cover; border-top-left-radius: 20px; border-top-right-radius: 20px;" src="asset-user/images/<?= $aktivitas->foto_aktivitas ?>" alt="<?php if (lang('Blog.Languange') == 'en') {
+                        <a href="<?= base_url($locale . '/' . ($locale === 'en' ? 'activities' : 'aktivitas') . '/' . (($locale === 'en') ? $aktivitas->slug_en : $aktivitas->slug_in)) ?>" class="produk-link">
+                            <img class="img-fluid w-100" style="object-fit: cover; border-top-left-radius: 20px; border-top-right-radius: 20px;" src="/asset-user/images/<?= $aktivitas->foto_aktivitas ?>" alt="<?php if (lang('Blog.Languange') == 'en') {
                                                                                                                                                                                 echo $aktivitas->nama_aktivitas_en;
                                                                                                                                                                             } else if (lang('Blog.Languange') == 'in') {
                                                                                                                                                                                 echo $aktivitas->nama_aktivitas_in;
                                                                                                                                                                             } ?>" loading="lazy">
                             <div class="bg-white border border-top-0 p-4 flex-grow-1 produk-content">
                                 <h4 class="display-5 produk-title">
-                                    <?php if (lang('Blog.Languange') == 'en') {
-                                        echo strip_tags($aktivitas->nama_aktivitas_en);
-                                    } ?>
-                                    <?php if (lang('Blog.Languange') == 'in') {
-                                        echo strip_tags($aktivitas->nama_aktivitas_in);
-                                    } ?>
+                                <?php if (lang('Blog.Languange') == 'en') {
+                                echo $aktivitas->nama_aktivitas_en;
+                            } ?>
+                            <?php if (lang('Blog.Languange') == 'in') {
+                                echo $aktivitas->nama_aktivitas_in;
+                            } ?>
                                 </h4>
                             </div>
                         </a>

@@ -1,3 +1,60 @@
+<?php
+// Set default language to 'id'
+$lang = session()->get('lang') ?? 'id';
+
+// Get current URL
+$current_url = uri_string();
+
+// Extract the first segment to detect language
+$lang_segment = explode('/', $current_url)[0]; // Detect 'id' or 'en'
+
+// Define page links based on language
+$homeLink = '';  // No trailing slash
+$aboutLink = $lang_segment === 'en' ? 'about' : 'tentang';
+$articleLink = $lang_segment === 'en' ? 'articles' : 'artikel';
+$productLink = $lang_segment === 'en' ? 'product' : 'produk';
+$activitiesLink = $lang_segment === 'en' ? 'activities' : 'aktivitas';
+$contactLink = $lang_segment === 'en' ? 'contact' : 'kontak';
+
+// Replace map for slugs (to be applied in dynamic content if needed)
+$replace_map = [
+    'tentang' => 'about',
+    'artikel' => 'articles',
+    'produk' => 'product',
+    'aktivitas' => 'activities',
+    'kontak' => 'contact'
+];
+
+// Define new language segment ('id' <-> 'en')
+$new_lang_segment = ($lang_segment === 'en') ? 'id' : 'en';
+
+// Remove language segment from current URL
+$url_without_lang = substr($current_url, strlen($lang_segment) + 1);
+
+// Only apply the translation logic if switching between different languages
+if ($new_lang_segment !== $lang_segment) {
+    // Switch segments based on the current language
+    foreach ($replace_map as $indonesian_segment => $english_segment) {
+        if ($lang_segment === 'en') {
+            $url_without_lang = str_replace($english_segment, $indonesian_segment, $url_without_lang);
+        } else {
+            $url_without_lang = str_replace($indonesian_segment, $english_segment, $url_without_lang);
+        } 
+    }
+}
+
+// Rebuild the clean URL without trailing slashes
+$clean_url = rtrim($new_lang_segment . '/' . ltrim($url_without_lang, '/'), '/');
+
+// Define base URLs for the language switch
+// If the language switch is the same as the current one, just return the same URL
+$english_url = ($lang_segment === 'en') ? current_url() : base_url('en' . ($url_without_lang ? '/' . ltrim($url_without_lang, '/') : ''));
+$indonesia_url = ($lang_segment === 'id') ? current_url() : base_url('id' . ($url_without_lang ? '/' . ltrim($url_without_lang, '/') : ''));
+?>
+
+
+
+
 <?= $this->extend('user/template/template') ?>
 <?= $this->Section('content'); ?>
 
@@ -33,7 +90,7 @@
                                 echo character_limiter($descper->deskripsi_perusahaan_in, 700);
                             } ?>
                         </p>
-                        <a class="btn btn-custom" href="<?= base_url('about') ?>"><?php echo lang('Blog.btnReadmore'); ?></a>
+                        <a class="btn btn-custom" href="<?= base_url($lang . '/' . $aboutLink) ?>"><?php echo lang('Blog.btnReadmore'); ?></a>
                     </div>
                 </div>
             </div>
@@ -97,7 +154,7 @@ $latestProducts = array_slice($tbproduk, 0, 2);
                                             </p>
                                         </div>
                                         <div class="button-group">
-                                            <a href="<?= base_url('product/detail/' . $product->id_produk . '/' . url_title($product->nama_produk_en) . '_' . url_title($product->nama_produk_in)) ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmore'); ?></a>
+                                            <a href="<?= base_url($locale . '/' . ($locale === 'en' ? 'product' : 'produk') . '/' . (($locale === 'en') ? $product->slug_en : $product->slug_in)) ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmore'); ?></a>
                                         </div>
                                     </div>
                                 </div>
@@ -132,7 +189,7 @@ $latestProducts = array_slice($tbproduk, 0, 2);
                                             </p>
                                         </div>
                                         <div class="button-group">
-                                            <a href="<?= base_url('product/detail/' . $product->id_produk . '/' . url_title($product->nama_produk_en) . '_' . url_title($product->nama_produk_in)) ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmore'); ?></a>
+                                            <a href="<?= base_url($locale . '/' . ($locale === 'en' ? 'product' : 'produk') . '/' . (($locale === 'en') ? $product->slug_en : $product->slug_in)) ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmore'); ?></a>
                                         </div>
                                     </div>
                                 </div>
@@ -143,7 +200,7 @@ $latestProducts = array_slice($tbproduk, 0, 2);
             </div>
         <?php endforeach; ?>
         <div class="text-center mt-5 mb-5">
-            <a href="<?= base_url('product') ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmoreProduct'); ?></a>
+            <a href="<?= base_url($lang . '/' . $productLink) ?>" class="btn btn-custom"><?php echo lang('Blog.btnReadmoreProduct'); ?></a>
         </div>
     </div>
 </div>
@@ -295,15 +352,15 @@ $latestProducts = array_slice($tbproduk, 0, 2);
             foreach ($limitedArtikel as $row) : ?>
                 <div class="col-lg-4 mb-4">
                     <div class="position-relative d-flex flex-column h-100 article-card">
-                        <a href="<?= base_url('/artikel/detail/' . $row->id_artikel) ?>" class="article-link">
-                            <img class="img-fluid w-100" style="object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;" src="<?= base_url('asset-user') ?>/images/<?= $row->foto_artikel; ?>" loading="lazy">
+                        <a href="<?= base_url(($locale !== '' ? $locale . '/' : '') . ($locale === 'en' ? 'articles' : 'artikel') . '/' . (($locale === 'en') ? $row->slug_en : $row->slug_in)) ?>" class="article-link">
+                            <img class="img-fluid w-100" style="object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;" src="<?= base_url('asset-user') ?>/images/<?= $row->foto_artikel; ?>" alt="<?= base_url('asset-user') ?>/images/<?= $row->foto_artikel; ?>" loading="lazy">
                             <div class="bg-white border border-top-0 p-4 flex-grow-1 article-content">
                                 <div class="mb-2">
                                     <span class="text-uppercase text-primary font-weight-bold"><?= date('d F Y', strtotime($row->created_at)); ?></span>
                                 </div>
-                                <h4 class="display-5 article-title"><?= strip_tags($row->judul_artikel) ?></h4>
+                                <h4 class="display-5 article-title"><?= session('lang') === 'id' ? strip_tags($row->judul_artikel) : strip_tags($row->judul_artikel_en); ?></h4>
 
-                                <p class="text-muted"><?= substr(strip_tags($row->deskripsi_artikel), 0, 30) ?>...</p>
+                                <p class="text-muted"><?= substr(strip_tags(session('lang') === 'id' ? $row->deskripsi_artikel : $row->deskripsi_artikel_en), 0, 30) ?>...</p>
                             </div>
                         </a>
                     </div>

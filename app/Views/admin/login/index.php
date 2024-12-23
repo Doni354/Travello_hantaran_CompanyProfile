@@ -6,7 +6,7 @@
 		<div class="d-flex flex-column align-content-end">
 			<div class="app-auth-body mx-auto">
 				<div class="app-auth-branding mb-4"><a class="app-logo" href="index.html"><img class="logo-icon me-2" src="<?php echo base_url('assets/images/app-logo.svg'); ?>" alt="logo"></a></div>
-				<h2 class="auth-heading text-center mb-5">Log in to Hantaran Kayu Malang</h2>
+				<h2 class="auth-heading text-center mb-5">Log in to Elecomp Indonesia</h2>
 				<div class="auth-form-container text-start">
 					<?php if (!empty(session()->getFlashdata('error'))) : ?>
 						<div class="alert alert-warning alert-dismissible fade show" role="alert">

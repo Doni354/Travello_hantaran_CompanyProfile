@@ -111,10 +111,14 @@
                         <img class="img-fluid" src="<?= base_url('asset-user/images/' . $artikel->foto_artikel); ?>" alt="<?= $artikel->judul_artikel; ?>">
                         <div class="article-text bg-white border border-top-0 p-4">
                             <div class="mb-3">
-                                <a class="text-uppercase mb-3 text-body"><?= date('d F Y', strtotime($artikel->created_at)); ?></a>
+                                <p class="text-uppercase mb-3 text-body"><?= date('d F Y', strtotime($artikel->created_at)); ?></p>
                             </div>
-                            <h1 class="display-5 mb-2 article-title"><?= $artikel->judul_artikel; ?></h1>
-                            <p class="fs-5"><?= $artikel->deskripsi_artikel; ?></p>
+                            <h1 class="display-5 mb-2 article-title"><?= $locale === 'id' ? strip_tags($artikel->judul_artikel) : strip_tags($artikel->judul_artikel_en) ?></h1>
+                            <p class="fs-5"><?php if (lang('Blog.Languange') == 'en') {
+                                echo $artikel->deskripsi_artikel_en;
+                            } else {
+                                echo $artikel->deskripsi_artikel;
+                            } ?></p>
                         </div>
                     </div>
                 </div>
@@ -132,9 +136,9 @@
                                 <img class="img-fluid article-image" src="<?= base_url('asset-user/images/' . $artikel_item->foto_artikel); ?>" alt="">
                                 <div class="w-100 h-100 d-flex flex-column justify-content-center border border-left-0 article-content">
                                     <div class="mb-2">
-                                        <a class="text-body" href="<?= base_url('/artikel/detail/' . $artikel_item->id_artikel) ?>"><small><?= date('d F Y', strtotime($artikel_item->created_at)); ?></small></a>
+                                        <p class="text-body" href="<?= base_url($locale . '/' . ($locale === 'en' ? 'articles' : 'artikel') . '/' . ($locale === 'id' ? $artikel_item->slug_in : $artikel_item->slug_en)) ?>"><small><?= date('d F Y', strtotime($artikel_item->created_at)); ?></small></p>
                                     </div>
-                                    <a class="h6 m-0 display-7" href="<?= base_url('/artikel/detail/' . $artikel_item->id_artikel) ?>"><?= $artikel_item->judul_artikel; ?></a>
+                                    <a class="h6 m-0 display-7" href="<?= base_url($locale . '/' . ($locale === 'en' ? 'articles' : 'artikel') . '/' . ($locale === 'id' ? $artikel_item->slug_in : $artikel_item->slug_en)) ?>"><?= htmlspecialchars(substr($artikel_item->judul_artikel, 0, 2000)); ?></a>
                                 </div>
                             </div>
                         <?php endforeach; ?>

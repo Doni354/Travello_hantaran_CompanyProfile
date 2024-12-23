@@ -1,0 +1,33 @@
+INFO - 2024-11-16 23:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 23:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 23:14:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 23:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 23:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 23:15:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 23:15:03 --> CSRF token verified.
+INFO - 2024-11-16 23:15:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 23:15:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 23:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 23:16:41 --> CSRF token verified.
+INFO - 2024-11-16 23:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-16 23:16:41 --> unlink(asset-user/images/Logo_Hantaran-Kayu-Malang_20122023045959.png): Resource temporarily unavailable
+in APPPATH\Controllers\admin\Profil.php on line 50.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(asset-user/images/Logo_Hantaran-Kayu-Malang_20122023045959.png): Resource temporarily unavailable', 'D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Controllers\\admin\\Profil.php', 50)
+ 2 APPPATH\Controllers\admin\Profil.php(50): unlink('asset-user/images/Logo_Hantaran-Kayu-Malang_20122023045959.png')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Profil->edit()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Profil))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\public\\index.php')
+INFO - 2024-11-16 23:17:16 --> CSRF token verified.
+INFO - 2024-11-16 23:17:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-16 23:17:16 --> unlink(asset-user/images/Logo_Hantaran-Kayu-Malang_20122023045959.png): Resource temporarily unavailable
+in APPPATH\Controllers\admin\Profil.php on line 50.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(asset-user/images/Logo_Hantaran-Kayu-Malang_20122023045959.png): Resource temporarily unavailable', 'D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\app\\Controllers\\admin\\Profil.php', 50)
+ 2 APPPATH\Controllers\admin\Profil.php(50): unlink('asset-user/images/Logo_Hantaran-Kayu-Malang_20122023045959.png')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Profil->edit()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Profil))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\Travello_hantaran_CompanyProfile\\public\\index.php')
+INFO - 2024-11-16 23:17:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

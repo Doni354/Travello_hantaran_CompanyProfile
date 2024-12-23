@@ -11,7 +11,7 @@
     <meta name="robots" content="noindex">
     <meta name="description" content="Elecomp Indonesia">
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
-    <link rel="shortcut icon" href="favicon.ico">
+
    
 
     <!-- FontAwesome JS-->

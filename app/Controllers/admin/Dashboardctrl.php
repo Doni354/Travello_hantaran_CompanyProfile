@@ -6,6 +6,8 @@ use App\Controllers\BaseController;
 use App\Models\ProdukModel;
 use App\Models\AktivitasModel;
 use App\Models\SliderModel;
+use App\Models\ArtikelModel;
+
 
 class Dashboardctrl extends BaseController
 {
@@ -18,10 +20,13 @@ class Dashboardctrl extends BaseController
         $produkModel = new ProdukModel();
         $aktivitasModel = new AktivitasModel();
         $sliderModel = new SliderModel();
+        $artikelModel = new ArtikelModel();
 
         $data['productCount'] = $produkModel->countAll();
         $data['aktivitasCount'] = $aktivitasModel->countAll();
         $data['sliderCount'] = $sliderModel->countAll();
+        $data['artikelCount'] = $artikelModel->countAll();
+
 
         return view('admin/dashboard/index', $data);
     }
